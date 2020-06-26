@@ -1,0 +1,45 @@
+buildscript {
+    ext.kotlinVersion = "1.3.72"
+    repositories {
+        gradlePluginPortal()
+        jcenter()
+    }
+
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+        classpath "org.jmailen.gradle:kotlinter-gradle:2.4.1"
+    }
+}
+
+plugins {
+    id 'java-gradle-plugin'
+}
+
+apply plugin: 'kotlin'
+
+apply plugin: 'org.jmailen.kotlinter'
+
+repositories {
+    google()
+    jcenter()
+    gradlePluginPortal()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+    implementation "com.android.tools.build:gradle:3.6.3"
+    implementation "org.jmailen.gradle:kotlinter-gradle:2.4.1"
+}
+
+gradlePlugin {
+    plugins {
+        applicationPlugin {
+            id = 'brewbeer.app'
+            implementationClass = 'io.android.brewdogbeers.plugin.ApplicationPlugin'
+        }
+        kotlinLibraryPlugin {
+            id = 'brewbeer-library.kotlin'
+            implementationClass = 'io.android.brewdogbeers.plugin.KotlinLibraryPlugin'
+        }
+    }
+}
