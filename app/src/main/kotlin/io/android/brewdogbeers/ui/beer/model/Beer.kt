@@ -11,5 +11,6 @@ data class Beer(
     val description: String,
     val image: String,
     val hops: List<String>,
-    val malts: List<String>
+    val malts: List<String>,
+    val method: Method
 ) : Parcelable

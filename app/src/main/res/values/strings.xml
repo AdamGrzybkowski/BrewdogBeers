@@ -2,4 +2,10 @@
     <string name="app_name">BrewdogBeers</string>
 
     <string name="beer_abv">ABV: %.1f</string>
+    <string name="beer_hops">Hops</string>
+    <string name="beer_malts">Malts</string>
+    <string name="beer_methods">Methods</string>
+    <string name="beer_method_mash_temp">Mash Temp</string>
+    <string name="beer_method_fermentation">Fermentation</string>
+    <string name="beer_method_twist">Twist</string>
 </resources>

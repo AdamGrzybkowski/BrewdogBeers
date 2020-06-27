@@ -8,6 +8,21 @@
         android:id="@+id/beersFragment"
         android:name="io.android.brewdogbeers.ui.beer.list.BeersFragment"
         android:label="BeersFragment">
+
+        <action
+            android:id="@+id/beers_to_details"
+            app:destination="@id/beerDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/beerDetailsFragment"
+        android:name="io.android.brewdogbeers.ui.beer.detail.BeerDetailsFragment"
+        android:label="BeerDetailFragment">
+
+        <argument
+            android:name="beer"
+            app:argType="io.android.brewdogbeers.ui.beer.model.Beer"
+            app:nullable="false" />
     </fragment>
 
 </navigation>
