@@ -1,0 +1,16 @@
+apply plugin: 'brewbeer-library.kotlin'
+
+dependencies {
+    implementation project(Modules.domain)
+
+    implementation Libs.kotlinStdLib
+    implementation Libs.kotlinCoroutines
+    implementation Libs.javaxInject
+    implementation Libs.dagger
+    kapt Libs.daggerProccessor
+
+    implementation Libs.retrofit
+    implementation Libs.moshiConverter
+    implementation Libs.moshi
+    kapt Libs.moshiCodegen
+}
