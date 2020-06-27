@@ -1,4 +1,6 @@
 apply plugin: 'brewbeer.app'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: "androidx.navigation.safeargs.kotlin"
 
 android {
     defaultConfig {
@@ -14,11 +16,33 @@ android {
         }
     }
 
+    viewBinding {
+        enabled = true
+    }
+}
+
+androidExtensions {
+    features = ["parcelize"]
 }
 
 dependencies {
+    implementation project(Modules.domain)
+    implementation project(Modules.dataRemote)
+
     implementation Libs.kotlinStdLib
     implementation Libs.appCompat
     implementation Libs.constraintLayout
     implementation Libs.material
+    implementation Libs.navigationUi
+    implementation Libs.navigationFragment
+    implementation Libs.lifecycle
+
+    implementation Libs.javaxInject
+
+    implementation Libs.dagger
+    implementation Libs.daggerAndroid
+    kapt Libs.daggerProccessor
+    kapt Libs.daggerAndroidProccessor
+
+    implementation Libs.coil
 }

@@ -1,5 +1,9 @@
 package io.android.brewdogbeers
 
-import android.app.Application
+import dagger.android.support.DaggerApplication
+import io.android.brewdogbeers.di.DaggerApplicationComponent
 
-class BrewdogApp : Application()
+class BrewdogApp : DaggerApplication() {
+
+    override fun applicationInjector() = DaggerApplicationComponent.factory().create(this)
+}

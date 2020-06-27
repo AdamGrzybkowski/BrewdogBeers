@@ -14,4 +14,6 @@
     <color name="onBackground">#000000</color>
     <color name="onSurface">#000000</color>
     <color name="onError">#FFFFFF</color>
+
+    <color name="cardBackground">#F4F4F4</color>
 </resources>

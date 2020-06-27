@@ -29,6 +29,7 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
     implementation "com.android.tools.build:gradle:3.6.3"
     implementation "org.jmailen.gradle:kotlinter-gradle:2.4.1"
+    implementation "androidx.navigation:navigation-safe-args-gradle-plugin:2.3.0"
 }
 
 gradlePlugin {

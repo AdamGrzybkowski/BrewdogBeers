@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">BrewdogBeers</string>
+
+    <string name="beer_abv">ABV: %.1f</string>
 </resources>
